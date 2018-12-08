@@ -1,0 +1,7 @@
+**/ci/static/**
+**/prod/static/**
+**/build/**
+**/node_modules/**
+**/dist/**
+**/coverage/**
+!.eslintrc.js

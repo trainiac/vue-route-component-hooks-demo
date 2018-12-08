@@ -1,0 +1,28 @@
+# Mac file system files
+.DS_Store
+
+# third party packages
+node_modules/
+
+# npm logs
+npm-debug.log
+
+# transpiled asset folder
+build/
+
+# jest coverage reports
+coverage/
+
+# webpack stats
+stats.json
+
+# pm2 output
+logs/
+
+# sublime project file
+*.sublime-project
+*.sublime-workspace
+
+# vscode settings
+.vscode/
+*.code-workspace

@@ -1,0 +1,56 @@
+{
+  "name": "vue-route-component-hooks",
+  "description": "Examples of Vue Route Component Hooks",
+  "version": "0.0.0",
+  "author": "trainiac <adkison.adrian@gmail.com>",
+  "homepage": "https://github.com/trainiac/vue-route-component-hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trainiac/vue-route/component-hooks"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "scripts": {
+    "develop": "NODE_ENV=development node --max_old_space_size=4096 server/index.js --env dev"
+  },
+  "dependencies": {
+    "vue-server-renderer": "^2.5.17",
+    "express": "^4.16.4",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/template": "^7.1.2",
+    "vue-loader": "^15.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-resolver": "1.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "chokidar": "^2.0.4",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.15.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.1.4"
+  }
+}
