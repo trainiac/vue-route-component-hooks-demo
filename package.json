@@ -1,24 +1,25 @@
 {
-  "name": "vue-route-component-hooks",
+  "name": "vue-route-component-hooks-demo",
   "description": "Examples of Vue Route Component Hooks",
   "version": "0.0.0",
   "author": "trainiac <adkison.adrian@gmail.com>",
-  "homepage": "https://github.com/trainiac/vue-route-component-hooks",
+  "homepage": "https://github.com/trainiac/vue-route-component-hooks-demo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trainiac/vue-route/component-hooks"
+    "url": "https://github.com/trainiac/vue-route-component-hooks-demo"
   },
   "engines": {
     "node": "8.9.4"
   },
   "scripts": {
-    "develop": "NODE_ENV=development node --max_old_space_size=4096 server/index.js --env dev"
+    "develop": "NODE_ENV=development node --max_old_space_size=4096 server/index.js"
   },
   "dependencies": {
-    "vue-server-renderer": "^2.5.17",
+    "copy-webpack-plugin": "^4.6.0",
     "express": "^4.16.4",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.17",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -28,13 +29,13 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/template": "^7.1.2",
-    "vue-loader": "^15.4.3",
+    "autoprefixer": "^9.3.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-plugin-resolver": "1.1.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "chokidar": "^2.0.4",
+    "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
@@ -46,11 +47,25 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0-beta.3",
     "html-webpack-plugin": "^3.2.0",
+    "postcss": "^7.0.5",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.0.0",
     "prettier": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.8.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.4.0",
+    "url-loader": "^1.1.2",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
   }
 }

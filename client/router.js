@@ -1,15 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import DemoApp from 'components/demo/DemoApp'
 
 Vue.use(VueRouter)
 
-export function createRouter() {
+export default function createRouter() {
   const router = new VueRouter({
     routes: [
       {
-        path: '/demo/',
-        component: DemoApp,
+        name: 'home',
+        path: '/',
+        component: () =>
+          import(/* webpackChunkName: "home-chunk" */ 'components/Home'),
+      },
+      {
+        path: '/users/',
+        component: () =>
+          import(/* webpackChunkName: "user-app-chunk" */ 'components/UserApp'),
+        children: [
+          {
+            name: 'user',
+            path: ':userId',
+            component: () =>
+              import(/* webpackChunkName: "user-app-chunk" */ 'components/User'),
+          },
+        ],
       },
     ],
     mode: 'history',

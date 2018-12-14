@@ -12,6 +12,7 @@ module.exports = {
   publicPath: '/static/',
   templateSrc: path.join(src, 'index.html'),
   webpackHmr: '/__webpack_hmr',
+  favicon: path.join(base, 'server/favicon.ico'),
   templateBuild: path.join(build, 'index.html'),
   serverBundleName,
   clientManifestName,

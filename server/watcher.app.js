@@ -1,11 +1,11 @@
 const webpack = require('webpack')
 const EventEmitter = require('events')
-const { createBundleRenderer } = require('vue-server-renderers')
+const { createBundleRenderer } = require('vue-server-renderer')
 const createHotMiddleware = require('webpack-hot-middleware')
 const createDevMiddleware = require('webpack-dev-middleware')
 const MFS = require('memory-fs')
-const getServerConfig = require('../config/webpack.server.config')
-const getClientConfig = require('../config/webpack.client.config')
+const serverConfig = require('../config/webpack.server.config')
+const clientConfig = require('../config/webpack.client.config')
 const paths = require('../config/paths')
 
 const readFile = (fs, file) => {
@@ -18,11 +18,10 @@ const readJSONFile = (fs, file) => {
 
 module.exports = function VueDevCompiler() {
   console.log('Building application')
-  const clientConfig = getClientConfig()
   const clientCompiler = webpack(clientConfig)
 
   const devMiddleware = createDevMiddleware(clientCompiler, {
-    logLevel: 'silent'
+    logLevel: 'silent',
     publicPath: paths.publicPath,
   })
 
@@ -46,7 +45,6 @@ module.exports = function VueDevCompiler() {
           shouldPreload: () => false,
           shouldPrefetch: () => false,
           basedir: paths.build,
-          inject: false,
         },
         newRenderOptions
       )
@@ -89,7 +87,6 @@ module.exports = function VueDevCompiler() {
     }
   })
 
-  const serverConfig = getServerConfig()
   const serverCompiler = webpack(serverConfig)
   const mfs = new MFS()
   serverCompiler.outputFileSystem = mfs
